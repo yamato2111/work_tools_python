@@ -1,3 +1,5 @@
+# 教室割において同時刻に教師の授業重複がないか精査する
+
 import openpyxl
 
 file_path = input('ファイルをドラッグ＆ドロップしてEnter>>')
