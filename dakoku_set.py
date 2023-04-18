@@ -1,3 +1,6 @@
+#打刻時間になるとアラートをあげて打刻画面を表示する
+#windowsのタスクスケジューラにバッチファイルを自動登録
+
 from tkinter import *
 import tkinter as tk
 import tkinter.ttk as ttk
