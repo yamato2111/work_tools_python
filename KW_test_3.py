@@ -1,3 +1,5 @@
+# 全体の教室割から個人単位のスケジュールを抽出する
+
 import openpyxl
 import sys
 import os
