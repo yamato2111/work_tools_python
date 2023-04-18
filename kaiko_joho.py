@@ -1,3 +1,5 @@
+# 教室割と開講情報一覧を照会し、日次の開講授業と担当者のリストを作成する
+
 import openpyxl as ox
 from openpyxl.styles.borders import Border, Side
 from openpyxl.styles import Alignment
