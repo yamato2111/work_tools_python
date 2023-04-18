@@ -6,7 +6,7 @@ import datetime
 import calendar
 import re
 
-wb_kai = ox.load_workbook("5. 2021年5月開講情報_0424.xlsx")
+wb_kai = ox.load_workbook(kaiko_file)
 ws_kai = wb_kai.worksheets[0]
 
 #----------開講情報整理--------------------
@@ -76,7 +76,7 @@ while ws_kai.cell(row, col).value is not None:
     row += 1
     kaiko_list.append(k_list_name)
 #----------教室割ファイル検索--------------------
-wb_kw = ox.load_workbook("2. 2021年5月教室割_0426.xlsx")
+wb_kw = ox.load_workbook(schedule_file)
 ws_kw = wb_kw.worksheets[0]
 #行範囲
 end_row = int(ws_kw.max_row)
@@ -120,7 +120,7 @@ for key_list in ite_kaiko_list: #探索用の授業リスト取り出し
                         break
 
 #----------案内情報整理--------------------
-wb_ann = ox.load_workbook("5. 2021年5月開講情報_0424.xlsx")
+wb_ann = ox.load_workbook(kaiko_file)
 ws_ann = wb_kai.worksheets[0]
 
 #「案内日」を探す
@@ -189,7 +189,7 @@ while ws_ann.cell(row, col).value is not None:
     row += 1
     annai_list.append(a_list_name)
 #----------教室割ファイル検索--------------------
-wb_kw = ox.load_workbook("2. 2021年5月教室割_0426.xlsx")
+wb_kw = ox.load_workbook(schedule_file)
 ws_kw = wb_kw.worksheets[0]
 
 #行範囲
@@ -234,7 +234,7 @@ for key_list in ite_annai_list: #探索用の授業リスト取り出し
                         break
 
 #----------説明会検索--------------------
-wb_st = ox.load_workbook("2. 2021年5月教室割_0426.xlsx")
+wb_st = ox.load_workbook(schedule_file)
 ws_st = wb_st.worksheets[0]
 
 #正規表現
