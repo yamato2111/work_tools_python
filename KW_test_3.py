@@ -7,7 +7,7 @@ from tkinter import filedialog
 
 
 #あとでGUI入力に帰る
-xlsx_path = '2. 2021年5月教室割_0426.xlsx'
+xlsx_path = schedule_file
 myoji = str(sys.argv[1])
 
 
@@ -60,7 +60,7 @@ for i in range(1, end_row):#行を1ずつ下がる
 #        print(celldata)
         if celldata is None:
             pass
-        elif '日鏵國際企劃' in celldata:
+        elif company_name in celldata:
             pass
         elif '日期' in celldata:
             pass
